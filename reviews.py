@@ -23,15 +23,15 @@ clf_dec.fit(train_x_vectors, train_y)
 
 from sklearn.naive_bayes import GaussianNB
 clf_gnb = GaussianNB()
-clf_gnb.fit(train_x_vectors.toarray(), train_y)
+clf_gnb.fit(train_vectors.toarray(), train_y)
 
 from sklearn.neighbors import KNeighborsClassifier
 clf_knc = KNeighborsClassifier(n_neighbors=5)
-clf_knc.fit(train_x_vectors, train_y)
+clf_knc.fit(train_vectors, train_y)
 
 from sklearn.neighbors import NearestCentroid
 clf_ncc = NearestCentroid()
-clf_ncc.fit(train_x_vectors, train_y)
+clf_ncc.fit(train_vectors, train_y)
 
 
 from sklearn.linear_model import SGDClassifier
@@ -45,7 +45,7 @@ clf_sgd = SGDClassifier(alpha=0.0001, average=False,
                                      random_state=None, shuffle=True, tol=0.001,
                                      validation_fraction=0.1, verbose=0,
                                      warm_start=False)
-clf_sgd.fit(train_x_vectors, train_y)
+clf_sgd.fit(train_vectors, train_y)
 
 
 
@@ -58,7 +58,7 @@ clf_log=LogisticRegression(C=1.0, class_weight=None, dual=False,
                                           random_state=None, solver='warn',
                                           tol=0.0001, verbose=0,
                                           warm_start=False)
-clf_log.fit(train_x_vectors, train_y)
+clf_log.fit(train_vectors, train_y)
 
 
 
